@@ -26,7 +26,7 @@ describe('Create user controller', () => {
     expect(response.status).toBe(201);
   });
 
-  it('should not be able to authenticate user with email does not exists.', async () => {
+  it('should not be able to create a user with the email already registered.', async () => {
     const response = await request(app).post('/api/v1/users').send({
       name: 'João Pedro',
       email: 'joao@finapi.com.br',
