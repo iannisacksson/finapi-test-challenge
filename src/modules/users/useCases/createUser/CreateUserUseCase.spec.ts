@@ -10,8 +10,6 @@ describe('Create user', () => {
   beforeEach(() => {
     inMemoryUsersRepository = new InMemoryUsersRepository();
 
-    createUserUseCase = new CreateUserUseCase(inMemoryUsersRepository);
-
     createUserUseCase = new CreateUserUseCase(
       inMemoryUsersRepository,
     );
